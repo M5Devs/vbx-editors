@@ -1,0 +1,41 @@
+{
+  "scope": "source.vbx",
+  "completions": [
+    {
+      "trigger": "if\tIf ... Then ... End If",
+      "contents": "If ${1:condition} Then\n\t${0:${TM_SELECTED_TEXT}}\nEnd If"
+    },
+    {
+      "trigger": "for\tFor ... To ... Next",
+      "contents": "For ${1:i} = ${2:1} To ${3:10}\n\t${0:${TM_SELECTED_TEXT}}\nNext"
+    },
+    {
+      "trigger": "while\tWhile ... Wend",
+      "contents": "While ${1:condition}\n\t${0:${TM_SELECTED_TEXT}}\nWend"
+    },
+    {
+      "trigger": "do\tDo ... Loop",
+      "contents": "Do While ${1:condition}\n\t${0:${TM_SELECTED_TEXT}}\nLoop"
+    },
+    {
+      "trigger": "select\tSelect Case ...",
+      "contents": "Select Case ${1:expression}\n\tCase ${2:value}\n\t\t${0:${TM_SELECTED_TEXT}}\nEnd Select"
+    },
+    {
+      "trigger": "sub\tSub ... End Sub",
+      "contents": "Sub ${1:Name}(${2:params})\n\t${0:${TM_SELECTED_TEXT}}\nEnd Sub"
+    },
+    {
+      "trigger": "function\tFunction ... End Function",
+      "contents": "Function ${1:Name}(${2:params})\n\t${0:${TM_SELECTED_TEXT}}\nEnd Function"
+    },
+    {
+      "trigger": "msgbox\tMsgBox(...)",
+      "contents": "MsgBox(${1:prompt})"
+    },
+    {
+      "trigger": "inputbox\tInputBox(...)",
+      "contents": "InputBox(${1:prompt})"
+    }
+  ]
+}

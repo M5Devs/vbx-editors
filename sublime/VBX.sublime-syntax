@@ -1,0 +1,49 @@
+%YAML 1.2
+---
+name: VBX
+file_extensions:
+  - vbx
+scope: source.vbx
+
+contexts:
+  main:
+    - include: comments
+    - include: strings
+    - include: numbers
+    - include: keywords
+    - include: builtins
+    - include: operators
+
+  comments:
+    - match: "'.*$"
+      scope: comment.line.apostrophe.vbx
+
+  strings:
+    - match: '"'
+      scope: punctuation.definition.string.begin.vbx
+      push: string_body
+
+  string_body:
+    - match: '"'
+      scope: punctuation.definition.string.end.vbx
+      pop: true
+    - match: '[^"]+'
+      scope: string.quoted.double.vbx
+
+  numbers:
+    - match: '\b\d+(\.\d+)?\b'
+      scope: constant.numeric.vbx
+
+  keywords:
+    - match: '(?i)\b(If|Then|Else|ElseIf|End|For|To|Step|Next|While|Wend|Do|Loop|Select|Case|Exit|Sub|Function|Return|Dim|Const)\b'
+      scope: keyword.control.vbx
+
+  builtins:
+    - match: '(?i)\b(Print|MsgBox|InputBox|Len|Left|Right|Mid|UCase|LCase|InStr|Trim|Replace|Str|Val|Abs|Sqr|Rnd|File\.Write|File\.Read)\b'
+      scope: support.function.builtin.vbx
+
+  operators:
+    - match: '[+\-*/%&=]'
+      scope: keyword.operator.vbx
+    - match: '<>|<=|>=|<|>'
+      scope: keyword.operator.vbx

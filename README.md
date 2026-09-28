@@ -7,11 +7,11 @@ Editor support for VBX (Visual Basic X) language.
 | Editor     | Status      | Path          |
 |------------|-------------|---------------|
 | VS Code    | ✅ Available | /vscode       |
-| Vim        | 🔮 Planned  | /vim          |
-| Neovim     | 🔮 Planned  | /neovim       |
-| Sublime    | 🔮 Planned  | /sublime      |
+| Vim        | ✅ Available | /vim          |
+| Neovim     | ✅ Available | /neovim       |
+| Sublime    | ✅ Available | /sublime      |
 | JetBrains  | 🔮 Planned  | /jetbrains    |
-| Emacs      | 🔮 Planned  | /emacs        |
+| Emacs      | ✅ Available | /emacs        |
 
 ## Links
 - VBX Compiler: https://github.com/M5Devs/vbx

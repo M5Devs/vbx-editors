@@ -1,0 +1,104 @@
+{
+  "If Statement": {
+    "prefix": "if",
+    "body": ["If ${1:condition} Then", "    ${2}", "End If"],
+    "description": "If...End If block"
+  },
+  "If Else": {
+    "prefix": "ife",
+    "body": ["If ${1:condition} Then", "    ${2}", "Else", "    ${3}", "End If"],
+    "description": "If...Else...End If block"
+  },
+  "ElseIf": {
+    "prefix": "elif",
+    "body": ["ElseIf ${1:condition} Then", "    ${2}"],
+    "description": "ElseIf branch"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": ["For ${1:i} = ${2:1} To ${3:10}", "    ${4}", "Next ${1:i}"],
+    "description": "For...Next loop"
+  },
+  "While Loop": {
+    "prefix": "wh",
+    "body": ["While ${1:condition}", "    ${2}", "Wend"],
+    "description": "While...Wend loop"
+  },
+  "Do While Loop": {
+    "prefix": "dow",
+    "body": ["Do While ${1:condition}", "    ${2}", "Loop"],
+    "description": "Do While...Loop"
+  },
+  "Do Loop While": {
+    "prefix": "dol",
+    "body": ["Do", "    ${1}", "Loop While ${2:condition}"],
+    "description": "Do...Loop While"
+  },
+  "Select Case": {
+    "prefix": "sc",
+    "body": [
+      "Select Case ${1:expr}",
+      "    Case ${2:value}",
+      "        ${3}",
+      "    Case Else",
+      "        ${4}",
+      "End Select"
+    ],
+    "description": "Select Case...End Select"
+  },
+  "Sub": {
+    "prefix": "sub",
+    "body": ["Sub ${1:Name}()", "    ${2}", "End Sub"],
+    "description": "Sub routine"
+  },
+  "Function": {
+    "prefix": "fn",
+    "body": [
+      "Function ${1:Name}(${2:params})",
+      "    ${3}",
+      "    Return ${4:result}",
+      "End Function"
+    ],
+    "description": "Function definition"
+  },
+  "Dim": {
+    "prefix": "dim",
+    "body": "Dim ${1:name} = ${2:value}",
+    "description": "Variable declaration"
+  },
+  "Dim Array": {
+    "prefix": "dima",
+    "body": "Dim ${1:name}(${2:size})",
+    "description": "Array declaration"
+  },
+  "Const": {
+    "prefix": "const",
+    "body": "Const ${1:NAME} = ${2:value}",
+    "description": "Constant declaration"
+  },
+  "Print": {
+    "prefix": "pr",
+    "body": "Print ${1}",
+    "description": "Print statement"
+  },
+  "MsgBox": {
+    "prefix": "msg",
+    "body": "MsgBox \"${1:message}\"",
+    "description": "Message box"
+  },
+  "InputBox": {
+    "prefix": "inp",
+    "body": "Dim ${1:result} = InputBox(\"${2:prompt}\")",
+    "description": "Input box"
+  },
+  "File Write": {
+    "prefix": "fw",
+    "body": "File.Write \"${1:filename}\", ${2:content}",
+    "description": "Write to file"
+  },
+  "File Read": {
+    "prefix": "fr",
+    "body": "Dim ${1:content} = File.Read(\"${2:filename}\")",
+    "description": "Read from file"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "vbx-language",
+  "displayName": "VBX — Visual Basic X",
+  "description": "Language support for VBX (.vbx) files — syntax highlighting, snippets, and more.",
+  "version": "0.1.0",
+  "publisher": "M5Devs",
+  "icon": "icon.png",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Programming Languages", "Snippets"],
+  "keywords": [
+    "vbx", "visual basic", "vb6",
+    "basic", "beginner", "education"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/M5Devs/vbx-editors"
+  },
+  "license": "GPL-3.0",
+  "contributes": {
+    "languages": [
+      {
+        "id": "vbx",
+        "aliases": ["Visual Basic X", "VBX"],
+        "extensions": [".vbx"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vbx",
+        "scopeName": "source.vbx",
+        "path": "./syntaxes/vbx.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "vbx",
+        "path": "./snippets/vbx.json"
+      }
+    ]
+  }
+}

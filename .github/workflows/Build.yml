@@ -1,0 +1,87 @@
+name: Package & Release All Editor Support
+
+on:
+  release:
+    types: [published]
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-all:
+    name: Package All Editors
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Package Everything
+        run: |
+          mkdir -p dist
+
+          # 1. VS Code (.vsix)
+          echo "Packaging VS Code..."
+          cp LICENSE vscode/LICENSE 2>/dev/null || true
+          cd vscode
+          npm install -g @vscode/vsce
+          vsce package --no-dependencies
+          mv *.vsix ../dist/
+          cd ..
+
+          # 2. Sublime Text (.zip)
+          echo "Packaging Sublime Text..."
+          cd sublime
+          zip -r ../dist/vbx-sublime.zip VBX.sublime-syntax vbx.sublime-completions README.md
+          cd ..
+
+          # 3. JetBrains TextMate Bundle (.zip)
+          echo "Packaging JetBrains Bundle..."
+          cd jetbrains
+          zip -r ../dist/vbx-jetbrains.tmbundle.zip VBX.tmbundle README.md
+          cd ..
+
+          # 4. Vim & Neovim (.zip)
+          echo "Packaging Vim / Neovim..."
+          cd vim
+          zip -r ../dist/vbx-vim.zip ftdetect syntax
+          cd ..
+
+          # 5. Notepad++ (UDL XML)
+          echo "Copying Notepad++ UDL..."
+          cp notepadplusplus/vbx.xml dist/vbx-notepadplusplus.xml
+
+          # 6. Emacs (.el)
+          echo "Copying Emacs Mode..."
+          cp emacs/vbx-mode.el dist/vbx-mode.el
+
+          # 7. Micro Editor (.yaml)
+          echo "Copying Micro Syntax..."
+          cp micro/vbx.yaml dist/vbx-micro.yaml
+
+          echo "All editor packages are ready in dist/:"
+          ls -la dist/
+
+      # 📦 حفظ كل الباكدجات كـ Artifact
+      - name: Upload All Editor Packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: vbx-all-editor-packages
+          path: dist/*
+
+      # 🚀 رفع كل الحزم دي في صفحة الـ GitHub Release تلقائياً
+      - name: Attach All Packages to Release
+        uses: softprops/action-gh-release@v2
+        if: github.event_name == 'release' || startsWith(github.ref, 'refs/tags/')
+        with:
+          files: dist/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

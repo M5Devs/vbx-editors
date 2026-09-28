@@ -1,0 +1,18 @@
+# Force GitHub to show Markdown in Language Bar
+*.md linguist-detectable=true
+*.md linguist-language=Markdown
+
+# Force GitHub to show JSON (VS Code), YAML (Sublime/Micro), and XML (Notepad++)
+*.json linguist-detectable=true
+*.yaml linguist-detectable=true
+*.xml linguist-detectable=true
+
+# Recognize Sublime Text files properly
+*.sublime-syntax linguist-detectable=true
+*.sublime-syntax linguist-language=YAML
+*.sublime-completions linguist-detectable=true
+*.sublime-completions linguist-language=JSON
+
+# Keep TextMate grammar detectable
+*.tmLanguage.json linguist-detectable=true
+*.tmLanguage.json linguist-language=JSON

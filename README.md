@@ -19,4 +19,4 @@ Editor support for VBX (Visual Basic X) language.
 
 ## Links
 - VBX Compiler: https://github.com/M5Devs/vbx
-- VS Code Marketplace: (coming soon)
+- VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=M5Dev.vbx-language

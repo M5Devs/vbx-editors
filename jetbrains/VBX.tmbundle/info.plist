@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>VBX</string>
+	<key>uuid</key>
+	<string>c1a2b3c4-d5e6-7f8a-9b0c-1d2e3f4a5b6c</string>
+	<key>contactName</key>
+	<string>M5Devs</string>
+	<key>description</key>
+	<string>Visual Basic X (VBX) language support bundle for JetBrains IDEs.</string>
+	<key>identifier</key>
+	<string>com.m5dev.vbx</string>
+</dict>
+</plist>

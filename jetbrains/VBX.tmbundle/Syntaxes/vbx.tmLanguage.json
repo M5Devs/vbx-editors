@@ -1,0 +1,61 @@
+{
+  "name": "Visual Basic X",
+  "scopeName": "source.vbx",
+  "fileTypes": ["vbx"],
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#keywords_control" },
+    { "include": "#keywords_declaration" },
+    { "include": "#keywords_logical" },
+    { "include": "#constants" },
+    { "include": "#types" },
+    { "include": "#functions_builtin" },
+    { "include": "#numbers" },
+    { "include": "#operators" }
+  ],
+  "repository": {
+    "comments": {
+      "name": "comment.line.apostrophe.vbx",
+      "match": "'.*$"
+    },
+    "strings": {
+      "name": "string.quoted.double.vbx",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": []
+    },
+    "keywords_control": {
+      "name": "keyword.control.vbx",
+      "match": "(?i)\\b(If|Then|Else|ElseIf|End\\s+If|For|To|Step|Next|While|Wend|Do|Loop|Select\\s+Case|Case|End\\s+Select|Exit\\s+For|Exit\\s+While|Exit\\s+Do|Return)\\b"
+    },
+    "keywords_declaration": {
+      "name": "keyword.declaration.vbx",
+      "match": "(?i)\\b(Dim|Const|Sub|Function|End\\s+Sub|End\\s+Function)\\b"
+    },
+    "keywords_logical": {
+      "name": "keyword.operator.word.vbx",
+      "match": "(?i)\\b(And|Or|Not|Mod|Is)\\b"
+    },
+    "constants": {
+      "name": "constant.language.vbx",
+      "match": "(?i)\\b(True|False)\\b"
+    },
+    "types": {
+      "name": "storage.type.vbx",
+      "match": "(?i)\\b(As|Integer|String|Double|Boolean|Float)\\b"
+    },
+    "functions_builtin": {
+      "name": "support.function.builtin.vbx",
+      "match": "(?i)\\b(Print|MsgBox|InputBox|Len|Left|Right|Mid|UCase|LCase|InStr|Trim|Replace|Str|Val|Abs|Sqr|Rnd|File\\.Write|File\\.Read)\\b"
+    },
+    "numbers": {
+      "name": "constant.numeric.vbx",
+      "match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+    },
+    "operators": {
+      "name": "keyword.operator.vbx",
+      "match": "[+\\-*/=<>&]"
+    }
+  }
+}

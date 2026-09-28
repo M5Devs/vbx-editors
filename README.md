@@ -12,7 +12,7 @@ Editor support for VBX (Visual Basic X) language.
 | Sublime    | ✅ Available | /sublime         |
 | Notepad++  | ✅ Available | /notepadplusplus |
 | Micro      | ✅ Available | /micro           |
-| JetBrains  | 🔮 Planned  | /jetbrains       |
+| JetBrains  | ✅ Available | /jetbrains       |
 | Emacs      | ✅ Available | /emacs           |
 
 > **Note:** The VS Code extension (`.vsix`) provides 100% out-of-the-box compatibility with VS Code forks including **Cursor**, **VSCodium**, and **Windsurf**.

@@ -1,0 +1,29 @@
+filetype: vbx
+
+detect:
+    filename: "\\.vbx$"
+
+rules:
+    - comment:
+        raw:
+            - "'.*$"
+
+    - string:
+        raw:
+            - "\".*?\""
+
+    - keyword:
+        raw:
+            - "(?i)\\b(If|Then|Else|ElseIf|End|For|To|Step|Next|While|Wend|Do|Loop|Select|Case|Exit|Sub|Function|Return|Dim|Const)\\b"
+
+    - statement:
+        raw:
+            - "(?i)\\b(Print|MsgBox|InputBox|Len|Left|Right|Mid|UCase|LCase|InStr|Trim|Replace|Str|Val|Abs|Sqr|Rnd|File\\.Write|File\\.Read)\\b"
+
+    - symbol.operator:
+        raw:
+            - "[+\\-*/%&=]|<>|<=|>=|<|>"
+
+    - constant.number:
+        raw:
+            - "\\b[0-9]+(\\.[0-9]+)?\\b"

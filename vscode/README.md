@@ -4,6 +4,9 @@ Syntax highlighting and snippets for
 VBX (Visual Basic X) — the modern successor
 to Visual Basic 6.
 
+## Compatibility
+This extension is 100% compatible out-of-the-box with Visual Studio Code as well as VS Code forks and derivatives such as **Cursor**, **VSCodium**, and **Windsurf**.
+
 ## Features
 - Syntax highlighting for keywords,
   strings, numbers, comments, functions

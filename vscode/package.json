@@ -3,7 +3,7 @@
   "displayName": "VBX — Visual Basic X",
   "description": "Language support for VBX (.vbx) files — syntax highlighting, snippets, and more.",
   "version": "0.1.0",
-  "publisher": "M5Devs",
+  "publisher": "M5Dev",
   "icon": "icon.png",
   "engines": { "vscode": "^1.85.0" },
   "categories": ["Programming Languages", "Snippets"],

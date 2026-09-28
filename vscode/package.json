@@ -15,7 +15,7 @@
     "type": "git",
     "url": "https://github.com/M5Devs/vbx-editors"
   },
-  "license": "GPL-3.0",
+  "license": "MIT",
   "contributes": {
     "languages": [
       {

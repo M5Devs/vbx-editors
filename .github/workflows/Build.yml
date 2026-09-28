@@ -43,11 +43,14 @@ jobs:
           zip -r ../dist/vbx-sublime.zip VBX.sublime-syntax vbx.sublime-completions README.md
           cd ..
 
-          # 3. JetBrains TextMate Bundle (.zip)
-          echo "Packaging JetBrains Bundle..."
-          cd jetbrains
-          zip -r ../dist/vbx-jetbrains.tmbundle.zip VBX.tmbundle README.md
+          # 3. JetBrains Plugin (.zip in standard Marketplace layout)
+          echo "Packaging JetBrains Plugin..."
+          mkdir -p build_jb/vbx-jetbrains/lib
+          jar cf build_jb/vbx-jetbrains/lib/vbx-jetbrains.jar -C jetbrains META-INF -C jetbrains VBX.tmbundle
+          cd build_jb
+          zip -r ../dist/vbx-jetbrains.zip vbx-jetbrains
           cd ..
+          rm -rf build_jb
 
           # 4. Vim & Neovim (.zip)
           echo "Packaging Vim / Neovim..."

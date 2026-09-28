@@ -1,0 +1,16 @@
+<idea-plugin>
+  <id>com.m5devs.vbx</id>
+  <name>Visual Basic X (VBX)</name>
+  <version>0.1.0</version>
+  <vendor email="support@m5devs.com" url="https://github.com/M5Devs">M5 Dev</vendor>
+  <description><![CDATA[
+    Visual Basic X (VBX) language support for JetBrains IDEs.
+    Includes syntax highlighting for keywords, control flow, built-in functions, strings, and comments.
+  ]]></description>
+  <idea-version since-build="231"/>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>org.jetbrains.plugins.textmate</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- TextMate bundle registration -->
+  </extensions>
+</idea-plugin>

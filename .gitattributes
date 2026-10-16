@@ -4,7 +4,7 @@
 
 # Force GitHub to show JSON (VS Code), YAML (Sublime/Micro), and XML (Notepad++)
 *.json linguist-detectable=true
-*.yaml linguist-detectable=true
+*.yml linguist-detectable=true
 *.xml linguist-detectable=true
 
 # Recognize Sublime Text files properly
